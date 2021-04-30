@@ -6,7 +6,9 @@
 #
 name: bestseller
 services:
-- name: bestseller-web
-  project: Bestseller.Web/Bestseller.Web.csproj
+- name: bestseller-frontend
+  project: Bestseller.Frontend/Bestseller.Frontend.csproj
 - name: bestseller-services-search
-  project: Bestseller.Services.Search/Bestseller.Services.Search.csproj
+  project: Services/Bestseller.Services.Search/Bestseller.Services.Search.csproj
+- name: bestseller-services-products
+  project: Services/Bestseller.Services.Products/Bestseller.Services.Products.csproj

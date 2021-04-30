@@ -1,0 +1,53 @@
+﻿@model Bestseller.Frontend.Models.EndpointModel
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+@section Scripts {
+    <script>
+        const productsContainer = document.getElementById("products-container")
+
+        function productTemplate(data) {
+            return `<img class="image" src="${data.images[0]}">
+                <div class="info py-2 px-2">
+                    <div class="row px-3">
+                        <div class="cart">
+                            <p class="mb-0 sm-font">ADD TO BAG</p>
+                        </div>
+                        <div class="order">
+                            <p class="mb-0 sm-font"><a href="/products/details/${data.id}">READ MORE</a></p>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <h5 class="mb-0 mt-2">${data.name.dk}</h5>
+                    </div>
+                    <div class="row px-3">
+                        <h5>${data.price}</h5>
+                    </div>
+                </div>`
+        }
+
+        async function getData() {
+            var request = await fetch(`@(Model.ProductsAPIEndpoint)products`);
+            var response = await request.json();
+
+            response.forEach(p => {
+                var tmpl = productTemplate(p);
+                const message = document.createElement("div");
+                message.setAttribute("class", "block text-center");
+                message.innerHTML = tmpl;
+                productsContainer.appendChild(message);
+            });
+        }
+
+        getData();
+    </script>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Products</h1>
+</div>
+
+<div id="products-container" class="container-fluid px-5 py-5 mx-auto">
+</div>

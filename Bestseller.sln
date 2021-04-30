@@ -3,18 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bestseller.Web", "Bestseller.Web\Bestseller.Web.csproj", "{473C9820-AE54-4AD1-9430-79EC920E0492}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bestseller.Frontend", "Bestseller.Frontend\Bestseller.Frontend.csproj", "{473C9820-AE54-4AD1-9430-79EC920E0492}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bestseller.Database", "Bestseller.Database\Bestseller.Database.csproj", "{59C42F09-C336-47DC-BD66-72104679453B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bestseller.Database", "Libraries\Bestseller.Database\Bestseller.Database.csproj", "{59C42F09-C336-47DC-BD66-72104679453B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bestseller.Services.Search", "Bestseller.Services.Search\Bestseller.Services.Search.csproj", "{71AD101B-E279-4CD5-BE77-7CAFF76C3B88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bestseller.Services.Search", "Services\Bestseller.Services.Search\Bestseller.Services.Search.csproj", "{71AD101B-E279-4CD5-BE77-7CAFF76C3B88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bestseller.SearchIndex", "Bestseller.Lucene\Bestseller.SearchIndex.csproj", "{A21A70D0-B2AB-498B-BF93-E6F94C1F3A1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bestseller.SearchIndex", "Libraries\Bestseller.Lucene\Bestseller.SearchIndex.csproj", "{A21A70D0-B2AB-498B-BF93-E6F94C1F3A1C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tye", "Tye", "{31FCFBF7-9D61-4C34-B8FD-1AD23582EC28}"
 	ProjectSection(SolutionItems) = preProject
 		tye.yaml = tye.yaml
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{5D3329D4-3E33-4081-8A7E-3C477E58CB64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{6A37A122-E8BF-4430-8374-FC4245B32F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bestseller.Services.Products", "Services\Bestseller.Services.Products\Bestseller.Services.Products.csproj", "{8B45D686-077F-46A7-8EA6-B8B3563B3458}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,9 +44,19 @@ Global
 		{A21A70D0-B2AB-498B-BF93-E6F94C1F3A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A21A70D0-B2AB-498B-BF93-E6F94C1F3A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A21A70D0-B2AB-498B-BF93-E6F94C1F3A1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B45D686-077F-46A7-8EA6-B8B3563B3458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B45D686-077F-46A7-8EA6-B8B3563B3458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B45D686-077F-46A7-8EA6-B8B3563B3458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B45D686-077F-46A7-8EA6-B8B3563B3458}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59C42F09-C336-47DC-BD66-72104679453B} = {5D3329D4-3E33-4081-8A7E-3C477E58CB64}
+		{71AD101B-E279-4CD5-BE77-7CAFF76C3B88} = {6A37A122-E8BF-4430-8374-FC4245B32F07}
+		{A21A70D0-B2AB-498B-BF93-E6F94C1F3A1C} = {5D3329D4-3E33-4081-8A7E-3C477E58CB64}
+		{8B45D686-077F-46A7-8EA6-B8B3563B3458} = {6A37A122-E8BF-4430-8374-FC4245B32F07}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C9B752C-DD4A-482A-9F1F-15A3320088CC}
