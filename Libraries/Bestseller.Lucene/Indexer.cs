@@ -1,8 +1,6 @@
 ﻿using Bestseller.Database;
 using Bestseller.Database.Interfaces;
 using Lucene.Net.Analysis;
-using Lucene.Net.Analysis.Core;
-using Lucene.Net.Analysis.NGram;
 using Lucene.Net.Analysis.Standard;
 using Lucene.Net.Documents;
 using Lucene.Net.Index;
@@ -15,7 +13,7 @@ using System.IO;
 
 namespace Bestseller.SearchIndex
 {
-    public class Indexer
+    public partial class Indexer
     {
         const LuceneVersion AppLuceneVersion = LuceneVersion.LUCENE_48;
         private Analyzer analyzer { get; set; }
@@ -81,28 +79,6 @@ namespace Bestseller.SearchIndex
             }
 
             return results;
-        }
-
-        public class ResultValue
-        {
-            public string Id { get; set; }
-            public string Name { get; set; }
-        }
-    }
-
-    internal class NGramAnalyzer : Analyzer
-    {
-        private LuceneVersion appLuceneVersion;
-        public NGramAnalyzer(LuceneVersion appLuceneVersion)
-        {
-            this.appLuceneVersion = appLuceneVersion;
-        }
-
-        protected override TokenStreamComponents CreateComponents(string fieldName, TextReader reader)
-        {
-            var source = new NGramTokenizer(appLuceneVersion, reader, 1, 10);
-            var filter = new LowerCaseFilter(appLuceneVersion, source);
-            return new TokenStreamComponents(source, filter);
         }
     }
 }
