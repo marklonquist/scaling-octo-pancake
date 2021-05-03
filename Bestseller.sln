@@ -20,7 +20,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{6A37A122-E8BF-4430-8374-FC4245B32F07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bestseller.Services.Products", "Services\Bestseller.Services.Products\Bestseller.Services.Products.csproj", "{8B45D686-077F-46A7-8EA6-B8B3563B3458}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bestseller.Services.Products", "Services\Bestseller.Services.Products\Bestseller.Services.Products.csproj", "{8B45D686-077F-46A7-8EA6-B8B3563B3458}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{45F0141A-0270-497C-9B86-559042BF95C9}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +61,7 @@ Global
 		{59C42F09-C336-47DC-BD66-72104679453B} = {5D3329D4-3E33-4081-8A7E-3C477E58CB64}
 		{71AD101B-E279-4CD5-BE77-7CAFF76C3B88} = {6A37A122-E8BF-4430-8374-FC4245B32F07}
 		{A21A70D0-B2AB-498B-BF93-E6F94C1F3A1C} = {5D3329D4-3E33-4081-8A7E-3C477E58CB64}
+		{31FCFBF7-9D61-4C34-B8FD-1AD23582EC28} = {45F0141A-0270-497C-9B86-559042BF95C9}
 		{8B45D686-077F-46A7-8EA6-B8B3563B3458} = {6A37A122-E8BF-4430-8374-FC4245B32F07}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
