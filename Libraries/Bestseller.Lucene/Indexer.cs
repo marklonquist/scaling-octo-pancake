@@ -40,16 +40,10 @@ namespace Bestseller.SearchIndex
                     continue;
                 }
 
-                var source = new
-                {
-                    Id = product.Id,
-                    Name = product.Name.Dk
-                };
-
                 var doc = new Document
                 {
-                    new Int32Field("id", source.Id, Field.Store.YES),
-                    new TextField("name", source.Name, Field.Store.YES)
+                    new Int32Field("id", product.Id, Field.Store.YES),
+                    new TextField("name", product.Name.Dk, Field.Store.YES)
                 };
 
                 writer.AddDocument(doc);
