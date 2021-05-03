@@ -35,7 +35,7 @@ namespace Bestseller.SearchIndex
 
             foreach (var product in allProducts)
             {
-                if (product.Name.En.Length == 0 && product.Name.Dk.Length == 0)
+                if (product.Name.Dk.Length == 0)
                 {
                     continue;
                 }
@@ -43,7 +43,7 @@ namespace Bestseller.SearchIndex
                 var source = new
                 {
                     Id = product.Id,
-                    Name = product.Name.En.Length != 0 ? product.Name.En : product.Name.Dk
+                    Name = product.Name.Dk
                 };
 
                 var doc = new Document

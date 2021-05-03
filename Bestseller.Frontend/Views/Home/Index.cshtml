@@ -33,7 +33,7 @@
                     message.setAttribute("class", "no_result");
                     message.setAttribute("tabindex", "1");
                     message.innerHTML = `
-                                    <span style="display: flex; align-items: center; font-weight: 100; color: rgba(0,0,0,.2);">Found No Results for "${query}"</span>
+                                    <span style="display: flex; align-items: center; font-weight: 100; color: rgba(0,0,0,.2);">"${query}" gav ingen resultater.</span>
                                 `;
 
                     list.appendChild(message);
@@ -56,6 +56,6 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <div class="autoComplete_wrapper">
-        <input id="autoComplete" type="text" tabindex="1" placeholder="Search...">
+        <input id="autoComplete" type="text" tabindex="1" placeholder="Søg...">
     </div>
 </div>
